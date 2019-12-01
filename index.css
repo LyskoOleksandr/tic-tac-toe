@@ -1,0 +1,165 @@
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #0b0b0b;
+    color: aliceblue;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+
+
+button {
+    color: aliceblue;
+    background: transparent;
+    border: 3px solid aliceblue;
+    padding: 15px 50px;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #262626;
+}
+
+.gameHere {
+    text-align: center;
+    width: 330px;
+    margin: 0 auto;
+}
+
+#gameField {
+    margin: 60px 0px;
+    display: flex;
+    width: 330px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.item {
+    width: 101px;
+    height: 101px;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: 3px solid transparent;
+    font-size: 90px;
+}
+
+
+.item-1 {
+    border-right: 3px solid aliceblue;
+    border-bottom: 3px solid aliceblue;
+}
+
+.item-3 {
+    border-left: 3px solid aliceblue;
+    border-bottom: 3px solid aliceblue;
+}
+
+.item-5 {
+    border: 3px solid aliceblue;
+}
+
+.item-7 {
+    border-top: 3px solid aliceblue;
+    border-right: 3px solid aliceblue;
+}
+
+.item-9 {
+    border-top: 3px solid aliceblue;
+    border-left: 3px solid aliceblue;
+}
+
+
+/* .score-content {
+    display: flex;
+    justify-content: center;
+} */
+
+/* .score-content p {
+    margin: 25px;
+} */
+
+.winner-box {
+    background: #009966;
+}
+
+.item div {
+    position: relative;
+    left: -5px;
+    top: -5px;
+    width: 110px;
+    height: 110px;
+}
+
+.item:hover {
+    background: #262626;
+}
+
+.item .o {
+    left: 0px;
+    top: 0px;
+    width: 60%;
+    height: 60%;
+    background: transparent;
+    margin: 10% auto;
+    border: 10px solid aliceblue;
+    border-radius: 50%;
+}
+
+.x {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.item .x::before,
+.item .x::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #fff;
+    left: 49px;
+    top: 9px;
+    height: 90px;
+    width: 12px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/* .x:before,
+.x:after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #fff;
+    left: 45px;
+    top: 5px;
+    height: 90px;
+    width: 12px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+} */
+
+.x:before {
+    transform: rotate(45deg);
+}
+
+.x:after {
+    transform: rotate(-45deg);
+}
+
+.blockAll {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
